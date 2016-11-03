@@ -29,6 +29,7 @@ h2 {
 }
 
 
+
 .clearfix::after {
   content: "";
   display: table;
@@ -69,6 +70,7 @@ h2 {
     margin-left: 180px;
 }
 
+/* index */
 
 .category-list {
     min-height: 348px;
@@ -84,7 +86,7 @@ h2 {
 }
 
 .category:last-child {
-    margin-right: 60px;
+    margin-right: 0px;
 }
 
 .company-information {
@@ -123,12 +125,16 @@ h2 {
 }
 
 .contacts-block  {
-    min-height: 418px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    position:relative;
+    width: 100%;
+    height: 418px;
+    /* background: url("img/map.jpg"); */
 }
 
-.adress {
+.background_map
+
+.adress .container{
+    position: absolute;
     margin-top: 54px;
     margin-bottom: 54px;
     min-height: 310px;
@@ -136,8 +142,9 @@ h2 {
 }
 
 .adress-block {
+    position: absolute;
+    top: 54px;
     width: 320px;
-    float: left;
     min-height: 310px;
     background-color: grey;
 }
@@ -154,7 +161,7 @@ h2 {
     float: left;
     width: 260px;
     margin-right: 140px;
-    background-color: blue;
+    background-color: red;
     min-height: 90px;
 }
 
@@ -170,6 +177,11 @@ h2 {
 
 
 /* catalog */
+
+.block-title {
+    margin: 0 auto;
+}
+
 
 .catalog {
     margin-bottom: 60px;
@@ -237,12 +249,19 @@ h2 {
     margin-right: 0px;
 }
 
+.goods-item:nth-child(5) {
+    margin-bottom: 0px;
+}
+
+.goods-item:nth-child(6) {
+    margin-bottom: 0px;
+}
 
 .paginator {
     width: 460px;
     float: left;
     min-height: 52px;
-    background-color: black;
+    background-color: yellow;
     margin-right: 400px;
 }
 
@@ -253,7 +272,7 @@ h2 {
 
 
 
-
+/* только для оформления сетки */
 
 
 
