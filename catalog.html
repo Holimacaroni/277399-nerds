@@ -8,10 +8,10 @@
 
 <body>
 
-    <header class="main-header">
+    <header class="main-header inner-page">
         <div class="header-top container clearfix">
             <div class="index-logo">
-                <img src="img/nerds-logo.png" width="160px" height="65px" alt="Nerds">
+                <a href="#"><img src="img/nerds-logo.png" width="160px" height="65px" alt="Nerds"></a>
             </div>
             <nav class="main-navigation">
                 <ul>
@@ -73,18 +73,18 @@
 
 
     <div class="block-right">
-        <div class="block-sorting">
-            <p class="filter-features">Сортировать</p>
+        <div class="block-sorting clearfix">
+            <p class="filter-title-sorting">Сортировать</p>
             <div class="sorting">
-                <ul>
-                <li><a href="#">По цене</a></li>
-                <li><a href="#">По типу</a></li>
-                <li><a href="#">По названию</a></li>
-                <li><span></span></li>
-                <li><span></span></li>
+                <ul class="sorting-list">
+                    <li><a class="current" href="#">По цене</a></li>
+                    <li><a href="#">По типу</a></li>
+                    <li><a href="#">По названию</a></li>
+                    <li ><a class="prew" href="#"></a></li>
+                    <li><a class="next" href="#"></a></li>
                 </ul>
             </div>
-        </div>
+        </div> 
         <div class="goods-list">
             <div class="goods-item">
                 <img src="img/browser.png" class="browser">
@@ -142,40 +142,41 @@
             </div>
         </div>
         <div class="paginator">
-            <a class="btn-white"><span>1</span></a>
+            <a class="btn-grey current"><span>1</span></a>
             <a href="#" class="btn-grey">2</a>
             <a href="#" class="btn-grey">3</a>
-            <a href="#" class="btn-grey">Следующая</a>
+            <a href="#" class="btn-grey next">Следующая</a>
         </div>
     </div>
 
     </main>
 
     <div class="contacts-block">
-        <img src="img/map.jpg" class="pin">
-        <!--<div class="background_map"><div>
-        <div class="map_pin">
-             <img src="img/map_pin.png" class="pin">
-        </div>-->
-        <div class="adress container">
-            <div class="adress-block">
-                <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
-                <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>тел. +7 (812) 275-75-75</p>
-                <a href="#" class="btn">Напишите нам</a>
-            </div>
+    <img src="img/map.jpg" class="pin">
+    <!--<div class="background_map"><div>
+    <div class="map_pin">
+        <img src="img/map_pin.png" class="pin">
+    </div>-->
+    <div class="adress container">
+        <div class="adress-block">
+            <p class="list-title">NЁRDS DESIGN STUDIO</p>
+            <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>тел. +7 (812) 275-75-75</p>
+            <a href="#" class="btn">Напишите нам</a>
         </div>
     </div>
+</div>
 
-    <footer class="main-footer container clearfix">
+<footer class="main-footer container clearfix">
         <div class="footer-social">
             <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
             <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
             <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
         </div>
         <div class="footer-slogan">
-            <p class="slogan-title">Давайте дружить, это выгодно!</p>
+            <p class="slogan">Давайте дружить, это выгодно!</p>
             <p>Скидка 10% для друзей из социальных сетей.</p>
        </div>
     </footer>
 </body>
 </html>
+
