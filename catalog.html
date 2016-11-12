@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -35,40 +37,77 @@
     <main class="catalog container clearfix">
 
     <div class="block-left">
-        <form action="#" method="post">
         <div class="filter-price">
-            <p class="filter-title">Стоимость:</p>
-            <div class="slider">
-            <!--тут не хватает слайдера и значений под ним-->
+        <p class="filter-title-price">Стоимость:</p>
+        <form action="form.php" method="GET">
+        <div class="range-filter">
+            <div class="range-controls">
+                <div class="scale">
+                    <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+
             </div>
+            <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+
+            </div>
+            
+        </div>
+
         </div>
         <div class="filter-grid">
             <p class="filter-title">Сетка:</p>
-            <label>
-            <input type="radio" name="select" value="1" checked>Адаптивная
+
+            <label class="feature-radio">
+            <input type="radio" name="select" checked>
+            <span class="radio-indicator"></span>
+            Адаптивная
             </label>
-            <label>
-            <input type="radio" name="select" value="1">Фиксированная
+            <label class="feature-radio">
+            <input type="radio" name="select">
+            <span class="radio-indicator"></span>
+            Фиксированная
             </label>
-            <label>
-            <input type="radio" name="select" value="1">Резиновая
+            <label class="feature-radio">
+            <input type="radio" name="select">
+            <span class="radio-indicator"></span>
+            Резиновая
             </label>
+
         </div>
         <div class="filter-features">
             <p class="filter-title">Особенности:</p>
-            <input type="checkbox" name="check1" id="check-smth" checked>
-            <label for="choose">Слайдер</label>
-            <input type="checkbox" name="check1" id="check-smth">
-            <label for="choose">Блок преимуществ</label>
-            <input type="checkbox" name="check1" id="check-smth" checked>
-            <label for="choose">Новости</label>
-            <input type="checkbox" name="check1" id="check-smth">
-            <label for="choose">Галерея</label>
-            <input type="checkbox" name="check1" id="check-smth">
-            <label for="choose">Корзина</label>
-            </form>
+            <label class="feature-checkbox">
+            <input type="checkbox" name="check1" checked>
+            <span class="checkbox-indicator"></span>
+            Слайдер
+            </label>
+            <label class="feature-checkbox">
+            <input type="checkbox" name="check1">
+            <span class="checkbox-indicator"></span>
+            Блок преимуществ
+            </label>
+            <label class="feature-checkbox">
+            <input type="checkbox" name="check1" checked>
+            <span class="checkbox-indicator"></span>
+            Новости
+            </label>
+            <label class="feature-checkbox">
+            <input type="checkbox" name="check1">
+            <span class="checkbox-indicator"></span>
+            Галерея
+            </label>
+            <label class="feature-checkbox">
+            <input type="checkbox" name="check1">
+            <span class="checkbox-indicator"></span>
+            Корзина
+            </label>
         </div>
         <input type="submit" value="Показать" class="btn-grey">
+            </form>
     </div>
 
 
@@ -84,60 +123,55 @@
                     <li><a class="next" href="#"></a></li>
                 </ul>
             </div>
-        </div> 
+        </div>
         <div class="goods-list">
             <div class="goods-item">
-                <img src="img/browser.png" class="browser">
+               
                 <img src="img/img-sedona.jpg" class="layout">
                 <div class="good-description">
-                    <div class="goods-title"></div>
-                    <div class="goods-info"></div>
-                    <div class="goods-price"><a href="#"></a></div>
+                    <div class="goods-title">SEDONA</div>
+                    <div class="goods-info">Информационный сайт<br>для туристов</div>
+                    <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
             </div>
-            <div class="goods-item">
-                <img src="img/browser.png" class="browser">
+            <div class="goods-item">              
                 <img src="img/img-pink.jpg" class="layout">
                 <div class="good-description">
-                    <div class="goods-title"></div>
-                    <div class="goods-info"></div>
-                    <div class="goods-price"><a href="#"></a></div>
+                    <div class="goods-title">PINK APP</div>
+                    <div class="goods-info">Продуктовый лендинг<br>приложения для IOS и Android</div>
+                    <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
             </div>
-            <div class="goods-item">
-                <img src="img/browser.png" class="browser">
+            <div class="goods-item">              
                 <img src="img/img-barbershop.jpg" class="layout">
                 <div class="good-description">
-                    <div class="goods-title"></div>
-                    <div class="goods-info"></div>
-                    <div class="goods-price"><a href="#"></a></div>
+                    <div class="goods-title">BARBERSHOP</div>
+                    <div class="goods-info">Сайтсалона красоты.<br>Для мужчин,да</div>
+                    <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
             </div>
-            <div class="goods-item">
-                <img src="img/browser.png" class="browser">
+            <div class="goods-item">              
                 <img src="img/img-mishka.jpg" class="layout">
                 <div class="good-description">
-                    <div class="goods-title"></div>
-                    <div class="goods-info"></div>
-                    <div class="goods-price"><a href="#"></a></div>
+                    <div class="goods-title">MISHKA</div>
+                    <div class="goods-info">Интернет-магазин<br>вязаных игрушек</div>
+                    <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
             </div>
-            <div class="goods-item">
-                <img src="img/browser.png" class="browser">
+            <div class="goods-item">              
                 <img src="img/img-aplus.jpg" class="layout">
                 <div class="good-description">
-                    <div class="goods-title"></div>
-                    <div class="goods-info"></div>
-                    <div class="goods-price"><a href="#"></a></div>
+                    <div class="goods-title"> A-PLUS</div>
+                    <div class="goods-info">Лендинг курсов повышения<br>квалификации</div>
+                    <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
             </div>
-            <div class="goods-item">
-                <img src="img/browser.png" class="browser">
+            <div class="goods-item">               
                 <img src="img/img-kvast.jpg" class="layout">
                 <div class="good-description">
-                    <div class="goods-title"></div>
-                    <div class="goods-info"></div>
-                    <div class="goods-price"><a href="#"></a></div>
+                    <div class="goods-title">КВАСТ</div>
+                    <div class="goods-info">Промо-сайт производителя<br>крафтового кваса</div>
+                    <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
             </div>
         </div>
@@ -151,7 +185,7 @@
 
     </main>
 
-    <div class="contacts-block">
+<div class="contacts-block">
     <img src="img/map.jpg" class="pin">
     <!--<div class="background_map"><div>
     <div class="map_pin">
@@ -177,6 +211,31 @@
             <p>Скидка 10% для друзей из социальных сетей.</p>
        </div>
     </footer>
+    <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <p class="modal-content-title">Напишите нам
+        </p>
+        <form class="name-form" action="#" method="post">
+
+<div class="inputs clearfix">
+<div class="input-name">
+        <label  class="input-caption" for="name">Ваше имя:</label>
+        <input class="input-popup" id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
+    </div>
+
+    <div class="input-mail">
+        <label class="input-caption" for="email">Ваш e-mail:</label>
+        <input class="input-popup" id="email" type="text" name="email" placeholder="Для отправки ответа" >
+    </div>
+</div>
+    <div class="text-message">
+        <label class="input-caption" for="message">Текст письма:</label>
+        <textarea class="input-popup" id="message" type="text" name="textarea" placeholder="В свободной форме"></textarea> 
+    </div>
+
+        <input type="submit" value="Отправить" class="btn">
+        </form>
+
+    </div>
 </body>
 </html>
-

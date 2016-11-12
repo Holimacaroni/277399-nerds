@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,26 +29,40 @@
             </div>
         </div>
         <div class="header-bottom">
-        <!-- <div class="flexslider">
-            <ul class="slides">
-            <li>
-            <h1>Долго, дорого,<br>скрупулезно</h1>
-            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-            <img src="img/slider-1.jpg"><br>
-            </li>
-            <li>
-            <h1>Любим математику<br>как никто другой</h1>
-            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-            <img src="img/slider-2.jpg"><br>
-            </li>
-            <li>
-            <h1>Только ночь,<br>только хардкор</h1>
-            <p>Работать днем, как все? Мы против этого.Ближе к полуночи работа только начинается.</p>
-            <img src="img/slider-3.jpg"><br>
-            </li>
-            </ul>
-         </div>
-         <a href="#" class="btn">Узнать больше</a> -->
+        <div class="slider">
+                <input type="radio" id="btn-1" name="toggle" checked>
+                    <input type="radio" id="btn-2" name="toggle">
+                    <input type="radio" id="btn-3" name="toggle">
+                    <div class="slider-controls">
+                        <label for="btn-1"></label>
+                        <label for="btn-2"></label>
+                        <label for="btn-3"></label>
+                    </div>
+                <div class="slides">
+                    <div class="slide">
+                        <div class="slide-text">
+                        <div class="slide-title">Долго, дорого, скрупулезно</div>
+                        <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                        <a class="btn" href="#">Узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-text">
+                        <div class="slide-title">Любим математику, как никто другой</div>
+                        <p>Никакого креатива, только математические формулы<br>для рассчета идеальных пропорций</p>
+                        <a class="btn" href="#">Узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-text">
+                        <div class="slide-title">Только ночь, чтолько хардкор</div>
+                        <p>Работать днем, как все? Мы против этого.<br>Ближе к полуночи работа только начинается</p>
+                        <a class="btn" href="#">Узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
         </div>
     </header>
 
@@ -106,13 +123,16 @@
     </div>
 
     <div class="logo-partners container">
-        <a href="#" class="logo partner-1"><img src="img/logo_partner1.png">
+        <a href="#" class="partner-1 logo"><img src="img/logo_partner1.png">
         </a>
-        <a href="#" class="logo partner-2"><img src="img/logo_partner2.png">
+        <div class="stripe"></div>
+        <a href="#" class="partner-2 logo"><img src="img/logo_partner2.png">
         </a>
-        <a href="#" class="logo partner-3"><img src="img/logo_partner3.png">
+        <div class="stripe"></div>
+        <a href="#" class="partner-3 logo"><img src="img/logo_partner3.png">
         </a>
-        <a href="#" class="logo partner-4"><img src="img/logo_partner4.png">
+        <div class="stripe"></div>
+        <a href="#" class="partner-4 logo"><img src="img/logo_partner4.png">
         </a>
     </div>
 
@@ -120,6 +140,7 @@
 
 <div class="contacts-block">
     <img src="img/map.jpg" class="pin">
+    <div id="map" class="contacts-map"></div>
     <!--<div class="background_map"><div>
     <div class="map_pin">
         <img src="img/map_pin.png" class="pin">
@@ -128,7 +149,7 @@
         <div class="adress-block">
             <p class="list-title">NЁRDS DESIGN STUDIO</p>
             <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>тел. +7 (812) 275-75-75</p>
-            <a href="#" class="btn">Напишите нам</a>
+            <a href="#" class="btn contact-button">Напишите нам</a>
         </div>
     </div>
 </div>
@@ -143,6 +164,36 @@
             <p class="slogan">Давайте дружить, это выгодно!</p>
             <p>Скидка 10% для друзей из социальных сетей.</p>
        </div>
-    </footer>
+</footer>
+    <script>
+        var link = document.querySelector(".contact-button");
+
+        var popup = document.querySelector(".modal-content");
+
+        var close = popup.querySelector(".modal-content-close");
+
+        var name = popup.querySelector("[name=name]");
+        
+        link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+        name.focus();
+        });
+
+        close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+        });
+
+        window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+            if (popup.classList.contains("modal-content-show")) {
+            popup.classList.remove("modal-content-show");
+          }
+        }
+      });
+
+
+    </script>
 </body>
 </html>
