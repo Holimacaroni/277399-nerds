@@ -6,6 +6,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -13,13 +16,13 @@
     <header class="main-header inner-page">
         <div class="header-top container clearfix">
             <div class="index-logo">
-                <a href="#"><img src="img/nerds-logo.png" width="160px" height="65px" alt="Nerds"></a>
+                <a href="index.html"><img src="img/nerds-logo.png" width="160px" height="65px" alt="Nerds"></a>
             </div>
             <nav class="main-navigation">
-                <ul>
-                <li><a href="#">Студия</a></li>
+                <ul class="menu">
+                <li><a href="index.html">Студия</a></li>
                 <li><a href="#">Клиенты</a></li>
-                <li><a href="#">Магазин</a></li>
+                <li class="active"><a href="#">Магазин</a></li>
                 <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -27,7 +30,7 @@
                 <a class="cart" href="#">Корзина</a>
             </div>
         </div>
-        <div class="header-bottom">
+        <div class="header-bottom inner">
             <div class="block-title container">
                 <h1 class="slogan-title">Магазин готовых шаблонов</h1>
             </div>
@@ -126,57 +129,68 @@
         </div>
         <div class="goods-list">
             <div class="goods-item">
-               
-                <img src="img/img-sedona.jpg" class="layout">
-                <div class="good-description">
-                    <div class="goods-title">SEDONA</div>
-                    <div class="goods-info">Информационный сайт<br>для туристов</div>
-                    <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
+                <div class="goods-item-inner">               
+                    <img src="img/img-sedona.jpg" class="layout">
+                    <div class="good-description">
+                        <div class="goods-title">SEDONA</div>
+                        <div class="goods-info">Информационный сайт<br>для туристов</div>
+                        <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
+                    </div>
                 </div>
             </div>
-            <div class="goods-item">              
+            <div class="goods-item"> 
+                <div class="goods-item-inner">             
                 <img src="img/img-pink.jpg" class="layout">
                 <div class="good-description">
                     <div class="goods-title">PINK APP</div>
                     <div class="goods-info">Продуктовый лендинг<br>приложения для IOS и Android</div>
                     <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
+                </div>
             </div>
-            <div class="goods-item">              
+            <div class="goods-item"> 
+                <div class="goods-item-inner">             
                 <img src="img/img-barbershop.jpg" class="layout">
                 <div class="good-description">
                     <div class="goods-title">BARBERSHOP</div>
                     <div class="goods-info">Сайтсалона красоты.<br>Для мужчин,да</div>
                     <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
+                </div>
             </div>
-            <div class="goods-item">              
+            <div class="goods-item"> 
+                <div class="goods-item-inner">             
                 <img src="img/img-mishka.jpg" class="layout">
                 <div class="good-description">
                     <div class="goods-title">MISHKA</div>
                     <div class="goods-info">Интернет-магазин<br>вязаных игрушек</div>
                     <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
+                </div>
             </div>
-            <div class="goods-item">              
+            <div class="goods-item">  
+                <div class="goods-item-inner">            
                 <img src="img/img-aplus.jpg" class="layout">
                 <div class="good-description">
                     <div class="goods-title"> A-PLUS</div>
                     <div class="goods-info">Лендинг курсов повышения<br>квалификации</div>
                     <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
+                </div>
             </div>
-            <div class="goods-item">               
+            <div class="goods-item">
+                <div class="goods-item-inner">               
                 <img src="img/img-kvast.jpg" class="layout">
                 <div class="good-description">
                     <div class="goods-title">КВАСТ</div>
                     <div class="goods-info">Промо-сайт производителя<br>крафтового кваса</div>
                     <div class="goods-price btn">9 900 руб.<a href="#"></a></div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="paginator">
-            <a class="btn-grey current"><span>1</span></a>
+            <span class="btn-grey current">1</span>
             <a href="#" class="btn-grey">2</a>
             <a href="#" class="btn-grey">3</a>
             <a href="#" class="btn-grey next">Следующая</a>
@@ -186,16 +200,12 @@
     </main>
 
 <div class="contacts-block">
-    <img src="img/map.jpg" class="pin">
-    <!--<div class="background_map"><div>
-    <div class="map_pin">
-        <img src="img/map_pin.png" class="pin">
-    </div>-->
+    <div id="map" class="contacts-map"></div>
     <div class="adress container">
         <div class="adress-block">
             <p class="list-title">NЁRDS DESIGN STUDIO</p>
             <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>тел. +7 (812) 275-75-75</p>
-            <a href="#" class="btn">Напишите нам</a>
+            <a href="#" class="btn contact-button">Напишите нам</a>
         </div>
     </div>
 </div>
@@ -217,25 +227,25 @@
         </p>
         <form class="name-form" action="#" method="post">
 
-<div class="inputs clearfix">
-<div class="input-name">
-        <label  class="input-caption" for="name">Ваше имя:</label>
-        <input class="input-popup" id="name" type="text" name="name" placeholder="Представьтесь, пожалуйста">
-    </div>
+        <div class="inputs clearfix">
+            <div class="input-name">
+                <label  class="input-caption" for="username">Ваше имя:</label>
+                <input class="input-popup" id="username" type="text" name="username" placeholder="Представьтесь, пожалуйста">
+            </div>
 
-    <div class="input-mail">
-        <label class="input-caption" for="email">Ваш e-mail:</label>
-        <input class="input-popup" id="email" type="text" name="email" placeholder="Для отправки ответа" >
-    </div>
-</div>
-    <div class="text-message">
-        <label class="input-caption" for="message">Текст письма:</label>
-        <textarea class="input-popup" id="message" type="text" name="textarea" placeholder="В свободной форме"></textarea> 
-    </div>
-
+            <div class="input-mail">
+                <label class="input-caption" for="email">Ваш e-mail:</label>
+                <input class="input-popup" id="email" type="text" name="email" placeholder="Для отправки ответа" >
+            </div>
+        </div>
+        <div class="text-message">
+            <label class="input-caption" for="message">Текст письма:</label>
+            <textarea class="input-popup" id="message" type="text" name="textarea" placeholder="В свободной форме"></textarea> 
+        </div>
         <input type="submit" value="Отправить" class="btn">
         </form>
-
     </div>
+
+<script src="js/scripts.js"></script>
 </body>
 </html>

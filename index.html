@@ -7,6 +7,8 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -20,7 +22,7 @@
                 <ul>
                 <li><a href="#">Студия</a></li>
                 <li><a href="#">Клиенты</a></li>
-                <li><a href="#">Магазин</a></li>
+                <li><a href="catalog.html">Магазин</a></li>
                 <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
@@ -31,13 +33,13 @@
         <div class="header-bottom">
         <div class="slider">
                 <input type="radio" id="btn-1" name="toggle" checked>
-                    <input type="radio" id="btn-2" name="toggle">
-                    <input type="radio" id="btn-3" name="toggle">
-                    <div class="slider-controls">
-                        <label for="btn-1"></label>
-                        <label for="btn-2"></label>
-                        <label for="btn-3"></label>
-                    </div>
+                <input type="radio" id="btn-2" name="toggle">
+                <input type="radio" id="btn-3" name="toggle">
+                <div class="slider-controls">
+                    <label for="btn-1"></label>
+                    <label for="btn-2"></label>
+                    <label for="btn-3"></label>
+                </div>
                 <div class="slides">
                     <div class="slide">
                         <div class="slide-text">
@@ -108,43 +110,42 @@
             <div class="features">
                 <div class="feature">
                     <p class="feature-percents">146<span class="percent">%</span></p>
-                    <p class="feature-info">Уровень<br>самоотдачи</p>
+                    <p class="feature-info">Уровень самоотдачи</p>
                 </div>
                 <div class="feature">
                     <p class="feature-percents">100<span class="percent">%</span></p>
-                    <p class="feature-info">Соблюдение<br>сроков</p>
+                    <p class="feature-info">Соблюдение сроков</p>
                 </div>
                 <div class="feature">
                     <p class="feature-percents">50<span class="percent">%</span></p>
-                    <p class="feature-info">Минимальная<br>предоплата</p>
+                    <p class="feature-info">Минимальная предоплата</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="logo-partners container">
-        <a href="#" class="partner-1 logo"><img src="img/logo_partner1.png">
+        <a href="#" class="partner-1 logo" target="_blank">
+            <img src="img/logo_partner1.png">
         </a>
         <div class="stripe"></div>
-        <a href="#" class="partner-2 logo"><img src="img/logo_partner2.png">
+        <a href="#" class="partner-2 logo" target="_blank">
+            <img src="img/logo_partner2.png">
         </a>
         <div class="stripe"></div>
-        <a href="#" class="partner-3 logo"><img src="img/logo_partner3.png">
+        <a href="#" class="partner-3 logo" target="_blank">
+            <img src="img/logo_partner3.png">
         </a>
         <div class="stripe"></div>
-        <a href="#" class="partner-4 logo"><img src="img/logo_partner4.png">
+        <a href="#" class="partner-4 logo" target="_blank">
+            <img src="img/logo_partner4.png">
         </a>
     </div>
 
 </main>
 
 <div class="contacts-block">
-    <img src="img/map.jpg" class="pin">
-    <div id="map" class="contacts-map"></div>
-    <!--<div class="background_map"><div>
-    <div class="map_pin">
-        <img src="img/map_pin.png" class="pin">
-    </div>-->
+    <div id="map" class="contacts-map"></div>   
     <div class="adress container">
         <div class="adress-block">
             <p class="list-title">NЁRDS DESIGN STUDIO</p>
@@ -164,36 +165,32 @@
             <p class="slogan">Давайте дружить, это выгодно!</p>
             <p>Скидка 10% для друзей из социальных сетей.</p>
        </div>
-</footer>
-    <script>
-        var link = document.querySelector(".contact-button");
+    </footer>
+    <div class="modal-content">
+        <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <p class="modal-content-title">Напишите нам
+        </p>
+        <form class="name-form" action="#" method="post">
 
-        var popup = document.querySelector(".modal-content");
+        <div class="inputs clearfix">
+            <div class="input-name">
+                <label  class="input-caption" for="username">Ваше имя:</label>
+                <input class="input-popup" id="username" type="text" name="username" placeholder="Представьтесь, пожалуйста">
+            </div>
 
-        var close = popup.querySelector(".modal-content-close");
+            <div class="input-mail">
+                <label class="input-caption" for="email">Ваш e-mail:</label>
+                <input class="input-popup" id="email" type="text" name="email" placeholder="Для отправки ответа" >
+            </div>
+        </div>
+        <div class="text-message">
+            <label class="input-caption" for="message">Текст письма:</label>
+            <textarea class="input-popup" id="message" type="text" name="textarea" placeholder="В свободной форме"></textarea> 
+        </div>
+        <input type="submit" value="Отправить" class="btn">
+        </form>
+    </div>
 
-        var name = popup.querySelector("[name=name]");
-        
-        link.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.add("modal-content-show");
-        name.focus();
-        });
-
-        close.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.remove("modal-content-show");
-        });
-
-        window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-            if (popup.classList.contains("modal-content-show")) {
-            popup.classList.remove("modal-content-show");
-          }
-        }
-      });
-
-
-    </script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
