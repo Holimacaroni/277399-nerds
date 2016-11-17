@@ -61,7 +61,7 @@ var myMap = new ymaps.Map('map', {
     }),
     myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {
         hintContent: 'Собственный значок метки',
-        balloonContent: 'Это красивая метка'
+        balloonContent: 'img/map_pin.png'
     }, {
         // Опции.
         // Необходимо указать данный тип макета.
