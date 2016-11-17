@@ -8,7 +8,6 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
 </head>
 
 <body>
@@ -16,14 +15,14 @@
     <header class="main-header">
         <div class="header-top container clearfix">
             <div class="index-logo">
-                <a href="#"><img src="img/nerds-logo.png" width="160px" height="65px" alt="Nerds"></a>
+                <a href="#"><img src="img/nerds-logo.png" width="160" height="65" alt="Nerds"></a>
             </div>
             <nav class="main-navigation">
                 <ul>
-                <li><a href="#">Студия</a></li>
-                <li><a href="#">Клиенты</a></li>
+                <li><a href="#studio">Студия</a></li>
+                <li><a href="#clients">Клиенты</a></li>
                 <li><a href="catalog.html">Магазин</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
             <div class="shopping-cart">
@@ -72,19 +71,19 @@
 
     <div class="category-list container clearfix">
         <div class="category">
-            <img src="img/illustration-1.jpg">
+            <img src="img/illustration-1.jpg" alt="Веб-сайты">
             <b class="category-name">Веб-сайты</b>
             <p class="category-description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a href="#" class="btn">Заказать</a>
+        <a href="#" class="btn">Заказать</a>
         </div>
         <div class="category">
-            <img src="img/illustration-2.jpg">
+            <img src="img/illustration-2.jpg" alt="Приложения">
             <b class="category-name">Приложения</b>
             <p class="category-description">Покорите топ-10 приложений в AppStore и Google Play</p>
             <a href="#" class="btn green">Заказать</a>
         </div>
         <div class="category">
-            <img src="img/illustration-3.jpg">
+            <img src="img/illustration-3.jpg" alt="Презентации">
             <b class="category-name">Презентации</b>
             <p class="category-description">Вы даже не подозреваете, насколько вы изумительны!</p>
             <a href="#" class="btn yellow">Заказать</a>
@@ -92,6 +91,7 @@
     </div>
 
     <div class="company-information container clearfix">
+        <a id="studio"></a>
         <div class="information-left">
             <b class="information-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</b>
             <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
@@ -100,12 +100,12 @@
             <ul class="list-information">
                 <li>Веб-сайтов любой сложности</li>
                 <li>Мобильных приложений для iOS и Android</li>
-                <li>Мобильных приложений для iOS и Android</li>
+                <li>Слайдшоу и видео для корпоративных презентаций</li>
             </ul>
             </div>
         </div>
         <div class="information-right">
-            <img class="information-logo" src="img/nerds-illustration.jpg" width="#" height="#">
+            <img class="information-logo" src="img/nerds-illustration.jpg" width="360" height="208" alt="nerds">
             <p class="list-title">C 2004 года Любим точность во всем:</p>
             <div class="features">
                 <div class="feature">
@@ -114,7 +114,7 @@
                 </div>
                 <div class="feature">
                     <p class="feature-percents">100<span class="percent">%</span></p>
-                    <p class="feature-info">Соблюдение сроков</p>
+                <p class="feature-info">Соблюдение сроков</p>
                 </div>
                 <div class="feature">
                     <p class="feature-percents">50<span class="percent">%</span></p>
@@ -125,31 +125,34 @@
     </div>
 
     <div class="logo-partners container">
+    <a id="clients"></a>
         <a href="#" class="partner-1 logo" target="_blank">
-            <img src="img/logo_partner1.png">
+            <img src="img/logo_partner1.png" alt="html academy">
         </a>
         <div class="stripe"></div>
         <a href="#" class="partner-2 logo" target="_blank">
-            <img src="img/logo_partner2.png">
+            <img src="img/logo_partner2.png" alt="barbershop borodinsky">
         </a>
         <div class="stripe"></div>
         <a href="#" class="partner-3 logo" target="_blank">
-            <img src="img/logo_partner3.png">
+            <img src="img/logo_partner3.png" alt="pink">
         </a>
         <div class="stripe"></div>
         <a href="#" class="partner-4 logo" target="_blank">
-            <img src="img/logo_partner4.png">
+            <img src="img/logo_partner4.png" alt="mishka">
         </a>
     </div>
 
 </main>
 
 <div class="contacts-block">
+<a id="contacts"></a>
     <div id="map" class="contacts-map"></div>   
     <div class="adress container">
         <div class="adress-block">
             <p class="list-title">NЁRDS DESIGN STUDIO</p>
-            <p>191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8<br>тел. +7 (812) 275-75-75</p>
+            <p class="adress-content">191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
+            <p class="phone">тел. +7 (812) 275-75-75</p>
             <a href="#" class="btn contact-button">Напишите нам</a>
         </div>
     </div>
@@ -164,7 +167,7 @@
         <div class="footer-slogan">
             <p class="slogan">Давайте дружить, это выгодно!</p>
             <p>Скидка 10% для друзей из социальных сетей.</p>
-       </div>
+        </div>
     </footer>
     <div class="modal-content">
         <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
@@ -185,7 +188,7 @@
         </div>
         <div class="text-message">
             <label class="input-caption" for="message">Текст письма:</label>
-            <textarea class="input-popup" id="message" type="text" name="textarea" placeholder="В свободной форме"></textarea> 
+            <textarea class="input-popup" id="message" name="textarea" placeholder="В свободной форме"></textarea> 
         </div>
         <input type="submit" value="Отправить" class="btn">
         </form>
