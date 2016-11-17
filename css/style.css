@@ -1,4 +1,3 @@
-html,
 body {
     min-width: 1440px;
     margin: 0;
@@ -47,6 +46,7 @@ h2 {
 .container {
     width: 1160px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .main-header {
@@ -890,7 +890,7 @@ h2 {
 }
 
 .goods-item-inner {
-    border: 1px solid #e5e5e5;
+    box-shadow: 0 0 1px #e5e5e5;
     transition: box-shadow .1s ease-in-out;
 }
 
